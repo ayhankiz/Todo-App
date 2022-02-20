@@ -1,0 +1,16 @@
+{
+  "name": "master",
+  "version": "1.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass --watch scss/app.scss:css/app.css & browser-sync start --server --files \"*.html, css/*.css, js/*.js\"",
+    "compile": "sass --watch scss/app.scss:css/app.css",
+    "server": "browser-sync start --server --files \"*.html, css/*.css, js/*.js\"" 
+  },
+  "author": "pechschwarz Media",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.1.0"
+  }
+}

@@ -1,0 +1,7 @@
+@use '../abstracts/' as *;
+
+.banner{
+    background-image: url("../../images/bg-desktop-dark.jpg");
+    background-size: cover;
+    padding: 150px 0;
+}

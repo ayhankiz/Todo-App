@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Master - Version 1.1.0</title>
+    <link rel="stylesheet" href="css/app.css">
+    <script src="js/controller.js" defer type="module"></script>
+</head>
+<body>
+    <header class="banner"></header>
+    <div class="overlay">
+        <div class="overlay__todo">
+            <h1 class="overlay__todo-headline">TODO</h1>
+            <form class="overlay__todo__input">
+                <input type="text" class="" placeholder="Create a new todo..." aria-placeholder="Create a new todo..." id="todo">
+                <input type="submit" value="test" class="d-none">
+            </form>
+            <ul class="overlay__todo__list">
+                <li class="overlay__todo__list-item">
+                    <div class="todo__bottom-content">
+                        <span class="todo__bottom-content-amount">0 tasks left</span>
+                        <div class="todo__bottom-content__buttons">
+                            <button class="button" id="btnAll">All</button>
+                            <button class="button" id="btnActive">Active</button>
+                            <button class="button" id="btnCompleted">Completed</button>
+                        </div>
+                        <button class="button" id="btnDelete">Clear Completed</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

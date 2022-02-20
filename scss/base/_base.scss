@@ -1,0 +1,123 @@
+@use '../abstracts/' as *;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $color-dark-blue-2;
+    font-family: "Joesfin Sans", sans-serif;
+    position: relative;
+    font-size: 20px;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.overlay {
+    height: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+
+    @media screen and (max-width:768px) {
+        width: 80%;
+    }
+
+    &__todo {
+        color: white;
+
+        &-headline {
+            letter-spacing: 20px;
+        }
+
+        &__input {
+            input {
+                background-color: $color-dark-blue-1;
+                font-size: 16px;
+                border-radius: 4px;
+                padding: 20px 20px;
+                border: none;
+                width: 100%;
+                color: white;
+            }
+        }
+
+        &__list {
+            padding: 0;
+            margin: 0;
+            margin-top: 30px;
+            list-style-type: none;
+            border-radius: 4px;
+            box-shadow: 0px 75px 35px 1px rgba(0,0,0,0.25);
+            position: relative;
+
+             &-item {
+                display: flex;
+                background-color: $color-dark-blue-1;
+                font-size: 16px;
+                border-radius: 4px;
+                padding: 20px 20px;
+                border: none;
+                width: 100%;
+                color: white;
+                border-bottom: 1px solid rgba($color-light-grayish-blue, 0.25);
+
+                &:last-child span {
+                    margin: 0;
+                }
+                &:last-child {
+                    padding: 15px 15px;
+                }
+
+                .checkbox {
+                    width: 20px;
+                    height: 20px;
+                    display: block;
+                    background-color: transparent;
+                    border-radius: 1px solid $color-light-gray-2;
+                }
+
+                span {
+                    margin-left: 35px;
+                    margin-top: 2px;
+
+                    &.completed {
+                        color: rgba($color-light-grayish-blue, 0.5);
+                        text-decoration: line-through;
+                    }
+                }
+
+                .todo__bottom-content {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    font-size: 14px;
+
+                    &__buttons {
+                        display: flex;
+                        align-items:center;
+                    }
+
+                    &-amount {
+                        color: $color-dark-grayish-blue-1;
+                    }
+                }
+            }
+        }
+    }
+
+    &::after {
+        content: "Drag and drop to reorder list";
+        font-size: 14px;
+        margin-top: 50px;
+        padding: 0rem 7rem;
+        color: rgba($color-light-grayish-blue, 0.25);
+        transform: translateX(-50%);
+    }
+}
